@@ -1,7 +1,7 @@
 plugins {
-    id 'org.springframework.boot' version '2.2.4.RELEASE'
-    id 'io.spring.dependency-management' version '1.0.9.RELEASE'
-    id 'java'
+	id 'org.springframework.boot' version '2.2.4.RELEASE'
+	id 'io.spring.dependency-management' version '1.0.9.RELEASE'
+	id 'java'
 }
 
 group = 'ren.oliver'
@@ -9,37 +9,17 @@ version = '0.0.1-SNAPSHOT'
 sourceCompatibility = '1.8'
 
 repositories {
-    mavenLocal()
-    mavenCentral()
+	mavenCentral()
 }
 
 dependencies {
-    implementation 'org.springframework.boot:spring-boot-starter'
-    testImplementation('org.springframework.boot:spring-boot-starter-test') {
-        exclude group: 'org.junit.vintage', module: 'junit-vintage-engine'
-    }
+	implementation 'org.springframework.boot:spring-boot-starter'
+	testImplementation('org.springframework.boot:spring-boot-starter-test') {
+		exclude group: 'org.junit.vintage', module: 'junit-vintage-engine'
+	}
+	implementation 'junit:junit:4.12'
 }
 
 test {
-    useJUnitPlatform()
-}
-
-this.beforeEvalute {
-    println 'this.beforeEvalute'
-}
-
-this.afterEvalute {
-    println 'this.afterEvalute'
-}
-
-this.gradle.buildFinished {
-    println 'this.gradle.buildFinished'
-}
-
-this.gradle.beforeProject {
-    println 'this.gradle.beforeProject'
-}
-
-this.gradle.afterProject {
-    println 'this.gradle.afterProject'
+	useJUnitPlatform()
 }
