@@ -23,3 +23,23 @@ dependencies {
 test {
     useJUnitPlatform()
 }
+
+this.beforeEvalute {
+    println 'this.beforeEvalute'
+}
+
+this.afterEvalute {
+    println 'this.afterEvalute'
+}
+
+this.gradle.buildFinished {
+    println 'this.gradle.buildFinished'
+}
+
+this.gradle.beforeProject {
+    println 'this.gradle.beforeProject'
+}
+
+this.gradle.afterProject {
+    println 'this.gradle.afterProject'
+}
