@@ -2,3 +2,4 @@ rootProject.name = 'gradle'
 include 'gradle-api'
 include 'gradle-app'
 
+println 'Initializing'
